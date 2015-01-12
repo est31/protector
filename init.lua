@@ -239,6 +239,11 @@ minetest.register_craft({
 	}
 })
 
+if mesecon and mesecon.register_mvps_stopper then
+	mesecon.register_mvps_stopper("protector:protect",
+		function () return true end)
+end
+
 --= Protection Logo
 
 minetest.register_node("protector:protect2", {
@@ -314,6 +319,11 @@ minetest.register_craft({
 		{"default:stone","default:stone","default:stone"},
 	}
 })
+
+if mesecon and mesecon.register_mvps_stopper then
+	mesecon.register_mvps_stopper("protector:protect2",
+		function () return true end)
+end
 
 -- If name entered into protector formspec
 
@@ -609,3 +619,8 @@ minetest.register_craft({
 		{'group:wood', 'group:wood', 'group:wood'},
 	}
 })
+
+if mesecon and mesecon.register_mvps_stopper then
+	mesecon.register_mvps_stopper("protector:chest",
+		function () return true end)
+end
